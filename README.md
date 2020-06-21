@@ -8,18 +8,39 @@
 4. [Postman](https://www.postman.com/) 
 5. [PowerShell - Opcional para execução em terminal](https://en.wikipedia.org/wiki/PowerShell)
 
-## Desenvolvimento
+## Clonar o Projeto
 
 cd "diretorio de sua preferencia" 
 
-git clone https://github.com/Januario86/spring-boot-config.git
+git clone https://github.com/Januario86/springboot-configuration-properties.git
 
 
 ## Executar o Projeto
 
  mvn spring-boot:run
- 
- 
+
+## Arquivo Aplication Properties
+
+spring.profiles.active=prod ou spring.profiles.active=dev 
+spring.application.name=Spring Boot Configuration Project
+
+## Rodando servidor em Desenvolvimento
+
+app.message = This is te property file to the  ${spring.application.name} specfic to DEV Environment
+
+spring.datasource.driver-class-name=org.h2.Driver
+spring.datasource.url=jdbc:h2:mem:db;DB_CLOSE_DELAY=-1
+spring.datasource.username=sa
+spring.datasource.password=sa
+
+## Rodando o servidor em Produção
+
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.datasource.url=<MYSQL_URL>
+spring.datasource.username=<USERNAME>>
+spring.datasource.password=<PASSWORD>
+
+
 ## Documentação
 
 Para referência adicional, considere as seguintes seções:
