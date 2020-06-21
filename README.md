@@ -24,7 +24,7 @@ git clone https://github.com/Januario86/springboot-configuration-properties.git
 spring.profiles.active=prod ou spring.profiles.active=dev 
 spring.application.name=Spring Boot Configuration Project
 
-## Rodando servidor em Desenvolvimento
+## Rodando servidor em Desenvolvimento - (PROPERTIES e YML)
 
 app.message = This is te property file to the  ${spring.application.name} specfic to DEV Environment
 
@@ -33,7 +33,20 @@ spring.datasource.url=jdbc:h2:mem:db;DB_CLOSE_DELAY=-1
 spring.datasource.username=sa
 spring.datasource.password=sa
 
-## Rodando o servidor em Produção
+> YML
+
+app:
+  message: This is te property file to the  ${spring.application.name} specfic to DEV Environment
+
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:db; DB_CLOSE_DELAY=-1
+    username: sa
+    password: sa
+
+
+## Rodando o servidor em Produção PROPERTIES 
 
 spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 spring.datasource.url=<MYSQL_URL>
